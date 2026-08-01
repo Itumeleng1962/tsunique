@@ -44,13 +44,15 @@ export default function Contact() {
                 ))}
               </ul>
             </div>
-            <div className="relative h-64 overflow-hidden rounded-3xl border border-line bg-cloud" data-testid="map-placeholder">
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-center">
-                <MapPin className="h-8 w-8 text-gold" strokeWidth={1.25} />
-                <p className="font-serif text-xl text-cream">Katlehong, Gauteng</p>
-                <p className="text-xs text-[#9A9A9A]">Google Maps embed placeholder</p>
-              </div>
-              <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(#111 1px, transparent 1px)", backgroundSize: "16px 16px" }} />
+            <div className="relative h-64 overflow-hidden rounded-3xl border border-line bg-cloud" data-testid="map-embed">
+              <iframe
+                title="TS Unique Laundry location"
+                src="https://www.google.com/maps?q=85+Matlala+Street,+Phadima,+Katlehong&z=15&output=embed"
+                className="h-full w-full border-0 grayscale-[0.2]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </Reveal>
 
