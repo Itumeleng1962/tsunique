@@ -1,0 +1,23 @@
+{
+  "summary": "Frontend-only regression testing for TS Unique Laundry after Special Garments removal + new flyer pricing/plans/address update. All 8 requested acceptance points verified PASS. 11 service cards remain (no Special Garments). Direct /services/special-garments renders 404. Pricing rate card, special-services add-ons, subscription plans, calculator (default subtotal R168 for 8kg Wash&Fold at R21/kg; total R183 with default-on delivery; toggling express adds flat R40 → R223), delivery note 'Free within 3km · else R 15', contact address '85 Matlala Street, Phadima, Katlehong', phone '070 310 6403' in both /contact and footer, theme toggle, and mock login (naledi@example.co.za / password123) → dashboard showing Family plan R 850 all verified.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Minor: Calculator has delivery toggle defaulted ON, so calc-total starts at R183 (not R168). The 'base' R168 does render correctly on the subtotal Row. If the spec intent is that calc-total itself equals base without delivery on load, consider defaulting delivery to false. Currently acceptable since subtotal row shows R168 as the pure base.",
+    "ZAR formatter uses en-ZA locale which renders thousands with a NBSP separator (e.g., 'R\u00a01\u00a0050'). Any future automated substring assertions should normalize whitespace/NBSP before matching."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "100%"},
+  "test_credentials": "naledi@example.co.za / password123 (mock login accepts any email + 6+ char password)",
+  "seed_data_creation": "None (mock data only)",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "App is frontend-only, no /api calls. Key testids: main-navbar, main-footer, theme-toggle, service-card-<slug>, plan-card-<id>, pricing-calculator, calc-type-<key>, calc-weight-slider, calc-express, calc-delivery, calc-total, calc-book-button. ZAR renders R with NBSP; use regex or NBSP-aware compare. Calc default is 8kg W&F + delivery ON = R183 (subtotal R168 + delivery R15). Family plan is the highlighted 'Recommended' plan at R 850.",
+  "rca of the issue": "No bugs found. During testing, an initial substring check for plan prices '1050' and '1300' produced a false failure because en-ZA locale formats thousands with a non-breaking space (R\u00a01\u00a0050). Re-checked with normalized whitespace and confirmed both Plus (R 1 050) and Premium (R 1 300) render correctly."
+}

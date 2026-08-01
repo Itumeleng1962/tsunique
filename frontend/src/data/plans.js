@@ -3,7 +3,7 @@ export const PLANS = [
   {
     id: "basic",
     name: "Basic",
-    price: 350,
+    price: 400,
     kg: 30,
     washes: 4,
     tagline: "Perfect for individuals & students",
@@ -20,7 +20,7 @@ export const PLANS = [
   {
     id: "standard",
     name: "Standard",
-    price: 600,
+    price: 650,
     kg: 42,
     washes: 4,
     tagline: "Great for busy professionals",
@@ -37,7 +37,7 @@ export const PLANS = [
   {
     id: "family",
     name: "Family",
-    price: 800,
+    price: 850,
     kg: 53,
     washes: 4,
     tagline: "Built for busy households",
@@ -55,7 +55,7 @@ export const PLANS = [
   {
     id: "plus",
     name: "Plus",
-    price: 1000,
+    price: 1050,
     kg: 63,
     washes: 4,
     tagline: "For large families & hosts",
@@ -73,7 +73,7 @@ export const PLANS = [
   {
     id: "premium",
     name: "Premium",
-    price: 1250,
+    price: 1300,
     kg: 76,
     washes: 4,
     tagline: "Our most generous plan",
@@ -92,19 +92,21 @@ export const PLANS = [
 
 // À la carte pricing used by the calculator (official rate card)
 export const PRICING = {
-  base: { washFold: 19, washIronFold: 22, ironOnly: 8.5 },
+  base: { washFold: 21, washIronFold: 25, ironOnly: 10.5 },
   addons: {
-    express: 30, // flat surcharge (R20–R50)
+    express: 40, // flat same-day surcharge
     curtains: 35, // per meter
     delivery: 15, // beyond 3 km (free within 3 km)
   },
   deliveryFreeKm: 3,
   special: [
-    { label: "Blankets & Duvets", price: "R50 – R120", unit: "per item" },
-    { label: "Bags", price: "R35 – R80", unit: "per bag" },
-    { label: "Curtains", price: "R35", unit: "per meter" },
+    { label: "Sheet, Duvet Cover or Towel", price: "R25", unit: "per item" },
+    { label: "Blankets & Duvets", price: "R60 – R150", unit: "per item" },
+    { label: "Bags", price: "R35 – R70", unit: "per bag" },
+    { label: "Pillows", price: "R25 – R50", unit: "per item" },
+    { label: "Jackets", price: "R40 – R80", unit: "per item" },
     { label: "Stain Remover", price: "R20", unit: "add-on" },
-    { label: "Bleach", price: "R20", unit: "add-on" },
-    { label: "Same-Day / Express", price: "R20 – R50", unit: "per order" },
+    { label: "White Socks", price: "R3", unit: "per pair" },
+    { label: "Same-Day / Express", price: "R40", unit: "per order" },
   ],
 };

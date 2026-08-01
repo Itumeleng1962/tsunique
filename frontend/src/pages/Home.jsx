@@ -57,7 +57,7 @@ export default function Home() {
             animate={{ y: [0, -14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="w-60 rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-md"
           >
-            <p className="font-serif text-5xl font-light text-white">R19<span className="text-base text-white/60">/kg</span></p>
+            <p className="font-serif text-5xl font-light text-white">R21<span className="text-base text-white/60">/kg</span></p>
             <p className="text-sm text-white/70">Wash, Dry &amp; Fold from</p>
             <div className="mt-4 flex items-center gap-2 border-t border-white/15 pt-4 text-gold">
               <Truck className="h-4 w-4" strokeWidth={1.5} /><span className="text-xs font-medium text-white/80">Free collection within 3 km</span>

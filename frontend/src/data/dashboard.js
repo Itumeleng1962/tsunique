@@ -6,7 +6,7 @@ export const CURRENT_USER = {
   avatar:
     "https://images.unsplash.com/photo-1562337404-3044c84ac061?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
   plan: "Family",
-  planPrice: 800,
+  planPrice: 850,
   kgIncluded: 53,
   kgUsed: 34,
   washesTotal: 8,
@@ -41,16 +41,16 @@ export const LAUNDRY_HISTORY = [
 ];
 
 export const INVOICES = [
-  { id: "INV-2026-006", date: "01 Jun 2026", amount: 800, status: "Paid" },
-  { id: "INV-2026-005", date: "01 May 2026", amount: 800, status: "Paid" },
-  { id: "INV-2026-004", date: "01 Apr 2026", amount: 800, status: "Paid" },
-  { id: "INV-2026-003", date: "01 Mar 2026", amount: 600, status: "Paid" },
+  { id: "INV-2026-006", date: "01 Jun 2026", amount: 850, status: "Paid" },
+  { id: "INV-2026-005", date: "01 May 2026", amount: 850, status: "Paid" },
+  { id: "INV-2026-004", date: "01 Apr 2026", amount: 850, status: "Paid" },
+  { id: "INV-2026-003", date: "01 Mar 2026", amount: 650, status: "Paid" },
 ];
 
 export const PAYMENTS = [
-  { id: "PAY-9921", date: "01 Jun 2026", method: "Visa •••• 4291", amount: 800, status: "Success" },
-  { id: "PAY-9834", date: "01 May 2026", method: "PayFast EFT", amount: 800, status: "Success" },
-  { id: "PAY-9750", date: "01 Apr 2026", method: "Visa •••• 4291", amount: 800, status: "Success" },
+  { id: "PAY-9921", date: "01 Jun 2026", method: "Visa •••• 4291", amount: 850, status: "Success" },
+  { id: "PAY-9834", date: "01 May 2026", method: "PayFast EFT", amount: 850, status: "Success" },
+  { id: "PAY-9750", date: "01 Apr 2026", method: "Visa •••• 4291", amount: 850, status: "Success" },
 ];
 
 export const NOTIFICATIONS = [

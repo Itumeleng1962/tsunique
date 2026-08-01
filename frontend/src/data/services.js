@@ -10,7 +10,7 @@ export const SERVICES = [
     icon: Shirt,
     title: "Wash & Fold",
     tagline: "Everyday freshness, perfectly folded",
-    from: 19,
+    from: 21,
     unit: "per kg",
     image:
       "https://images.unsplash.com/photo-1684248655527-46bee8e79029?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -28,7 +28,7 @@ export const SERVICES = [
     icon: Sparkles,
     title: "Wash, Dry, Iron & Fold",
     tagline: "The complete crease-free treatment",
-    from: 22,
+    from: 25,
     unit: "per kg",
     image:
       "https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -46,7 +46,7 @@ export const SERVICES = [
     icon: PanelTop,
     title: "Iron Only",
     tagline: "Crisp, boardroom-ready pressing",
-    from: 8.5,
+    from: 10.5,
     unit: "per kg",
     image:
       "https://images.unsplash.com/photo-1489274495757-95c7c837b101?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -59,7 +59,7 @@ export const SERVICES = [
     icon: Layers,
     title: "Blankets",
     tagline: "Deep-clean comfort for the cold nights",
-    from: 50,
+    from: 60,
     unit: "per item",
     image:
       "https://images.unsplash.com/photo-1724847885015-be191f1a47ef?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -72,7 +72,7 @@ export const SERVICES = [
     icon: Bath,
     title: "Duvets",
     tagline: "Hotel-fresh bedding, restored",
-    from: 50,
+    from: 60,
     unit: "per item",
     image:
       "https://images.unsplash.com/photo-1760722974657-f64bce2f9cc5?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -146,19 +146,6 @@ export const SERVICES = [
     benefits: ["Same-day turnaround", "Priority queue", "Real-time updates", "Available 6 days a week"],
   },
   {
-    slug: "special-garments",
-    icon: Sparkles,
-    title: "Special Garments",
-    tagline: "Couture care for your finest pieces",
-    from: 180,
-    unit: "per item",
-    image:
-      "https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
-    description:
-      "Wedding dresses, suits, silk and heirloom fabrics deserve specialist hands. Individually assessed and cared for with white-glove attention.",
-    benefits: ["Individual assessment", "Delicate & couture safe", "Preservation packaging", "Insured handling"],
-  },
-  {
     slug: "delivery",
     icon: Truck,
     title: "Free Delivery",
@@ -168,8 +155,8 @@ export const SERVICES = [
     image:
       "https://images.unsplash.com/photo-1635274605638-d44babc08a4f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
     description:
-      "We collect and deliver at a time that suits you. Free on all subscription plans and orders over R250 — track your driver in real time.",
-    benefits: ["Free on all plans", "Live driver tracking", "Contactless option", "7-day scheduling"],
+      "We collect and deliver at a time that suits you. Free within 3 km on all orders and plans (just R15 beyond) — track your driver in real time.",
+    benefits: ["Free within 3 km", "Live driver tracking", "Contactless option", "7-day scheduling"],
   },
 ];
 

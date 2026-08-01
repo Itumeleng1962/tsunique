@@ -5,7 +5,7 @@ export const BRAND = {
   phone: "070 310 6403",
   whatsapp: "27703106403",
   email: "loudlyclean@gmail.com",
-  address: "304 Vlie Street, Skosana, Katlehong",
+  address: "85 Matlala Street, Phadima, Katlehong",
   hours: [
     { day: "Mon – Fri", time: "07:00 – 19:00" },
     { day: "Saturday", time: "08:00 – 17:00" },

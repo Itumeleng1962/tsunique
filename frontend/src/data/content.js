@@ -55,7 +55,7 @@ export const FAQS = [
   },
   {
     q: "How is pricing calculated?",
-    a: "Most services are priced per kilogram (from R19/kg wash, dry & fold), while items like blankets, duvets and curtains have set rates. Prefer a monthly plan? Our 5-week subscription cycle includes 4 washes and saves you around R200 a month.",
+    a: "Most services are priced per kilogram (from R21/kg wash, dry & fold), while items like blankets, duvets and curtains have set rates. Prefer a monthly plan? Our 5-week subscription cycle includes 4 washes and saves you around R200 a month.",
   },
   {
     q: "What if a garment is damaged or lost?",
