@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { Facebook, MessageCircle, Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Facebook, Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
 import { Logo } from "@/components/common/Logo";
+import { WhatsAppIcon } from "@/components/common/WhatsAppIcon";
 
 // TikTok brand glyph (not available in lucide-react)
 function TikTokIcon(props) {
@@ -16,7 +17,7 @@ function TikTokIcon(props) {
 const SOCIALS = [
   { Icon: TikTokIcon, href: BRAND.socials.tiktok, label: "TikTok" },
   { Icon: Facebook, href: BRAND.socials.facebook, label: "Facebook" },
-  { Icon: MessageCircle, href: BRAND.socials.whatsapp, label: "WhatsApp" },
+  { Icon: WhatsAppIcon, href: BRAND.socials.whatsapp, label: "WhatsApp" },
 ];
 
 export function Footer() {
