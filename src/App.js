@@ -20,7 +20,6 @@ const Pricing = lazy(() => import("@/pages/Pricing"));
 const Subscriptions = lazy(() => import("@/pages/Subscriptions"));
 const HowItWorks = lazy(() => import("@/pages/HowItWorks"));
 const About = lazy(() => import("@/pages/About"));
-const Blog = lazy(() => import("@/pages/Blog"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
@@ -59,7 +58,6 @@ function AppRoutes() {
           <Route path="/subscriptions" element={<Subscriptions />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<LegalPrivacy />} />

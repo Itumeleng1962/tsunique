@@ -135,7 +135,7 @@ export const STEPS = [
   {
     n: "02",
     title: "We collect at your door",
-    text: "Our uniformed driver arrives on time, weighs your bag and confirms your order instantly.",
+    text: "Our driver arrives on time, weighs your bag and confirms your order instantly.",
   },
   {
     n: "03",

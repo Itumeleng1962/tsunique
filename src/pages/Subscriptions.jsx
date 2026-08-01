@@ -10,7 +10,7 @@ const ROWS = [
   { label: "Monthly kilograms", get: (p) => `${p.kg}kg` },
   { label: "Collections / month", get: (p) => p.washes },
   { label: "Ironing included", get: (p) => p.id !== "basic" },
-  { label: "Free delivery", get: (p) => p.id !== "basic" ? true : "Over R250" },
+  { label: "Free delivery", get: (p) => "Within 3 km" },
   { label: "Express lane", get: (p) => ["family", "plus", "premium"].includes(p.id) },
   { label: "Dedicated manager", get: (p) => p.id === "premium" },
 ];

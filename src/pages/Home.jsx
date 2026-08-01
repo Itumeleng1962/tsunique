@@ -20,7 +20,7 @@ import { ZAR } from "@/lib/utils";
 
 const TRUST = [
   { icon: ShieldCheck, label: "Insured garment care" },
-  { icon: Truck, label: "Free doorstep delivery" },
+  { icon: Truck, label: "Free collection within 3 km" },
   { icon: Clock, label: "48-hour turnaround" },
   { icon: Leaf, label: "Eco-friendly detergents" },
 ];

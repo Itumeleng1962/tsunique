@@ -7,9 +7,8 @@ export const BRAND = {
   email: "loudlyclean@gmail.com",
   address: "85 Matlala Street, Phadima, Katlehong",
   hours: [
-    { day: "Mon – Fri", time: "07:00 – 19:00" },
-    { day: "Saturday", time: "08:00 – 17:00" },
-    { day: "Sunday", time: "09:00 – 13:00" },
+    { day: "Sun – Thu", time: "07:00 – 19:00" },
+    { day: "Fri – Sat", time: "07:00 – 22:00" },
   ],
   socials: {
     tiktok: "https://www.tiktok.com/@loudlyclean?_r=1&_t=ZS-98WYxUOYcb9",
@@ -28,7 +27,6 @@ export const NAV_LINKS = [
   { label: "Subscriptions", to: "/subscriptions" },
   { label: "How It Works", to: "/how-it-works" },
   { label: "About", to: "/about" },
-  { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
 ];
 
