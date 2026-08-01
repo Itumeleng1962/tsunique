@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Twitter, Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Facebook, MessageCircle, Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
 import { Logo } from "@/components/common/Logo";
+
+// TikTok brand glyph (not available in lucide-react)
+function TikTokIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M16.5 3c.3 2.1 1.5 3.5 3.6 3.7v2.4c-1.2.1-2.3-.3-3.6-1v5.8c0 3.4-2.7 5.9-6 5.9a5.7 5.7 0 0 1-5.7-5.7 5.7 5.7 0 0 1 6.6-5.6v2.6a3 3 0 0 0-1 -.2 3 3 0 1 0 3 3V3h2.5z" />
+    </svg>
+  );
+}
+
+const SOCIALS = [
+  { Icon: TikTokIcon, href: BRAND.socials.tiktok, label: "TikTok" },
+  { Icon: Facebook, href: BRAND.socials.facebook, label: "Facebook" },
+  { Icon: MessageCircle, href: BRAND.socials.whatsapp, label: "WhatsApp" },
+];
 
 export function Footer() {
   return (
@@ -16,12 +31,15 @@ export function Footer() {
               greater Katlehong.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Instagram, Facebook, Twitter].map((Icon, i) => (
+              {SOCIALS.map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`footer-social-${label.toLowerCase()}`}
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-gold hover:text-gold"
-                  aria-label="Social link"
+                  aria-label={label}
                 >
                   <Icon className="h-4 w-4" strokeWidth={1.5} />
                 </a>

@@ -11,7 +11,12 @@ export const BRAND = {
     { day: "Saturday", time: "08:00 – 17:00" },
     { day: "Sunday", time: "09:00 – 13:00" },
   ],
-  socials: { instagram: "#", facebook: "#", twitter: "#", tiktok: "#" },
+  socials: {
+    tiktok: "https://www.tiktok.com/@loudlyclean?_r=1&_t=ZS-98WYxUOYcb9",
+    facebook: "https://www.facebook.com/share/1HNYoB74LD/",
+    instagram: "#",
+    whatsapp: "https://wa.me/27703106403",
+  },
   logo:
     "https://customer-assets-wrfwihn1.emergentagent.net/job_luxury-clean-app-1/artifacts/llr2d9hf_TS%20Logo.jpeg",
 };
