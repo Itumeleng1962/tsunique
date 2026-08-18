@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  ArrowRight, Star, ShieldCheck, Truck, Leaf, Clock, Sparkles, Quote,
+  ArrowRight, Star, ShieldCheck, Truck, Leaf, Clock, Sparkles, Quote, MapPin, Phone, Mail
 } from "lucide-react";
 import { Reveal } from "@/components/common/Motion";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Counter } from "@/components/common/Counter";
 import { PricingCalculator } from "@/components/common/PricingCalculator";
 import { PlanCard } from "@/components/common/PlanCard";
+import { Phase2Showcase } from "@/components/common/Phase2Showcase";
+import { SEO } from "@/components/common/SEO";
 import { SERVICES } from "@/data/services";
 import { PLANS } from "@/data/plans";
 import { TESTIMONIALS, STATS, FAQS, STEPS } from "@/data/content";
@@ -21,7 +23,7 @@ import { ZAR } from "@/lib/utils";
 const TRUST = [
   { icon: ShieldCheck, label: "Insured garment care" },
   { icon: Truck, label: "Free collection within 3 km" },
-  { icon: Clock, label: "48-hour turnaround" },
+  { icon: Clock, label: "24h - 48h SLA turnaround" },
   { icon: Leaf, label: "Eco-friendly detergents" },
 ];
 
@@ -35,9 +37,10 @@ const WHY = [
 export default function Home() {
   return (
     <>
+      <SEO title="Home | TS Unique Laundry Management" description="Professional laundry subscription packages, wash & fold, dry cleaning, and same-day express service across Katlehong." />
+      
       {/* HERO */}
       <section className="relative flex min-h-[94vh] items-end overflow-hidden">
-        {/* Full-bleed background */}
         <div className="absolute inset-0">
           <motion.img
             initial={{ scale: 1.12 }} animate={{ scale: 1 }} transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
@@ -48,7 +51,7 @@ export default function Home() {
           <div className="noise absolute inset-0" />
         </div>
 
-        {/* Floating glass stat card (parallax float) */}
+        {/* Floating glass stat card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}
           className="absolute right-6 top-28 z-10 hidden lg:block xl:right-16"
@@ -71,7 +74,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-md"
           >
-            <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Not We Serve · Est 2025
+            <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Shine, We Serve · Est 2021
           </motion.span>
 
           <motion.h1
@@ -85,7 +88,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.18 }}
             className="mt-7 max-w-xl text-lg leading-relaxed text-white/75"
           >
-            Premium wash, press and doorstep delivery for busy homes and businesses across Katlehong. We collect it dirty, return it perfect.
+            Premium subscription laundry, dry cleaning, and doorstep delivery for households and businesses across Katlehong. We collect it dirty, return it perfect.
           </motion.p>
 
           <motion.div
@@ -93,11 +96,11 @@ export default function Home() {
             className="mt-9 flex flex-wrap items-center gap-4"
           >
             <Link to="/register" data-testid="hero-cta-primary" className="group inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-ink">
-              Start your plan
+              Start Your Plan
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} />
             </Link>
             <Link to="/pricing" data-testid="hero-cta-secondary" className="rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:bg-white/10">
-              Calculate a price
+              Calculate Price
             </Link>
           </motion.div>
 
@@ -116,15 +119,6 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-
-        {/* Scroll cue */}
-        <motion.div
-          animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/50 lg:flex"
-        >
-          <span className="text-[10px] font-medium uppercase tracking-[0.3em]">Scroll</span>
-          <span className="h-10 w-px bg-gradient-to-b from-white/50 to-transparent" />
-        </motion.div>
       </section>
 
       {/* Trust badges */}
@@ -145,7 +139,7 @@ export default function Home() {
       <section className="container-x py-24 lg:py-32">
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading eyebrow="What we do" title="A service for every fabric in your life" lede="From weekly essentials to your finest garments — handled with the same obsessive care." />
-          <Reveal><Link to="/services" className="group inline-flex items-center gap-1.5 text-sm font-medium text-cream">View all services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
+          <Reveal><Link to="/services" className="group inline-flex items-center gap-1.5 text-sm font-medium text-cream">View all 11 services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.slice(0, 6).map((s, i) => (
@@ -154,6 +148,7 @@ export default function Home() {
                 <div className="relative h-48 overflow-hidden">
                   <img src={s.image} alt={s.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <span className="absolute left-4 top-4 flex h-11 w-11 items-center justify-center rounded-xl glass-card"><s.icon className="h-5 w-5 text-gold" strokeWidth={1.5} /></span>
+                  <span className="absolute right-4 top-4 rounded-full bg-ink/80 px-3 py-1 text-[11px] font-semibold text-gold backdrop-blur-md">{s.turnaround}</span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-serif text-2xl text-cream">{s.title}</h3>
@@ -189,14 +184,14 @@ export default function Home() {
 
       {/* HOW IT WORKS TIMELINE */}
       <section className="container-x py-24 lg:py-32">
-        <SectionHeading center eyebrow="How it works" title="Effortless, in four steps" />
-        <div className="mt-16 grid gap-8 md:grid-cols-4">
+        <SectionHeading center eyebrow="How it works" title="Effortless customer journey" />
+        <div className="mt-16 grid gap-8 md:grid-cols-3 lg:grid-cols-6">
           {STEPS.map((s, i) => (
-            <Reveal key={s.n} delay={i * 0.1}>
+            <Reveal key={s.n} delay={i * 0.08}>
               <div className="relative">
-                <span className="font-serif text-6xl font-light text-gold/25">{s.n}</span>
-                <h3 className="mt-3 font-serif text-2xl text-cream">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#9A9A9A]">{s.text}</p>
+                <span className="font-serif text-4xl font-light text-gold/30">{s.n}</span>
+                <h3 className="mt-2 font-serif text-xl text-cream">{s.title}</h3>
+                <p className="mt-1.5 text-xs leading-relaxed text-[#9A9A9A]">{s.text}</p>
               </div>
             </Reveal>
           ))}
@@ -213,37 +208,11 @@ export default function Home() {
 
       {/* SUBSCRIPTIONS */}
       <section className="container-x py-24 lg:py-32">
-        <SectionHeading center eyebrow="Subscriptions" title="Membership that pays for itself" lede="Lock in your best rate with a monthly plan — pause, upgrade or cancel anytime." />
+        <SectionHeading center eyebrow="Subscriptions" title="Membership that pays for itself" lede="Lock in your best rate with a 5-week monthly cycle plan — pause, upgrade or cancel anytime." />
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {PLANS.slice(0, 3).map((p, i) => <Reveal key={p.id} delay={i * 0.08} className="h-full"><PlanCard plan={p} /></Reveal>)}
         </div>
-        <Reveal className="mt-10 text-center"><Link to="/subscriptions" className="group inline-flex items-center gap-1.5 text-sm font-medium text-cream">Compare all five plans <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
-      </section>
-
-      {/* DASHBOARD PREVIEW */}
-      <section className="bg-surface py-24 lg:py-32">
-        <div className="container-x grid items-center gap-16 lg:grid-cols-2">
-          <SectionHeading eyebrow="Your portal" title="A dashboard as polished as your shirts" lede="Track orders, manage your subscription, view invoices and earn referral rewards — all in one beautiful place." />
-          <Reveal>
-            <div className="overflow-hidden rounded-3xl border border-line shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
-              <div className="flex items-center gap-1.5 border-b border-line bg-cloud px-4 py-3">
-                <span className="h-3 w-3 rounded-full bg-[#ddd]" /><span className="h-3 w-3 rounded-full bg-[#ddd]" /><span className="h-3 w-3 rounded-full bg-gold/60" />
-              </div>
-              <div className="space-y-4 bg-surface p-6">
-                <div className="flex gap-4">
-                  <div className="flex-1 rounded-2xl border border-line p-4"><p className="text-xs text-[#9A9A9A]">Remaining washes</p><p className="mt-1 font-serif text-3xl text-cream">3<span className="text-base text-[#9A9A9A]">/8</span></p></div>
-                  <div className="flex-1 rounded-2xl border border-line p-4"><p className="text-xs text-[#9A9A9A]">Plan</p><p className="mt-1 font-serif text-2xl text-gold">Family</p></div>
-                </div>
-                <div className="rounded-2xl border border-line p-4">
-                  <p className="text-xs text-[#9A9A9A]">Monthly usage</p>
-                  <div className="mt-3 flex items-end gap-2">
-                    {[40, 55, 35, 70, 50, 65].map((h, i) => <span key={i} className="flex-1 rounded-t bg-gold/70" style={{ height: h }} />)}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
+        <Reveal className="mt-10 text-center"><Link to="/subscriptions" className="group inline-flex items-center gap-1.5 text-sm font-medium text-cream">Compare all subscription plans <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
       </section>
 
       {/* STATS */}
@@ -294,11 +263,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEWSLETTER + INSTAGRAM */}
+      {/* PHASE 2 FUTURE SHOWCASE */}
+      <Phase2Showcase />
+
+      {/* NEWSLETTER */}
       <NewsletterGallery />
 
+      {/* LOCATION & GOOGLE MAPS PREVIEW */}
+      <section className="bg-surface py-16 border-t border-line">
+        <div className="container-x grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-1.5"><MapPin className="h-4 w-4" /> Store Location</span>
+            <h2 className="font-serif text-3xl text-cream">Visit Our Katlehong Hub</h2>
+            <p className="text-xs text-[#9A9A9A] leading-relaxed">
+              Drop off your hamper in person or meet our garment care specialists. Operating Monday through Saturday with express counter intake.
+            </p>
+            <div className="space-y-2 text-xs text-cream pt-2">
+              <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold" /> 1482 Masakhane St, Katlehong, Johannesburg, 1431</p>
+              <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> +27 (0) 11 892 4000</p>
+              <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> info@tsuniquelaundry.co.za</p>
+            </div>
+          </div>
+          <div className="h-64 rounded-3xl overflow-hidden border border-line">
+            <iframe
+              title="TS Laundry Location Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114400.413725514!2d28.125712!3d-26.331451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9514e82b7b51b7%3A0x6b10702652a921d7!2sKatlehong!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
-      <section className="container-x pb-24 lg:pb-32">
+      <section className="container-x py-24 lg:py-32">
         <Reveal>
           <div className="noise relative overflow-hidden rounded-[2.5rem] bg-ink px-8 py-20 text-center text-white lg:px-16">
             <div className="relative z-10 mx-auto max-w-2xl">

@@ -19,11 +19,12 @@ export function PricingCalculator() {
   const [delivery, setDelivery] = useState(true);
 
   const { subtotal, expressCost, deliveryCost, total } = useMemo(() => {
-    const weight = kg[0];
-    const base = PRICING.base[type] * weight;
-    const exp = express ? PRICING.addons.express : 0;
+    const weight = (kg && kg[0]) ? kg[0] : 1;
+    const rate = (PRICING && PRICING.base && PRICING.base[type]) ? PRICING.base[type] : 21;
+    const base = rate * weight;
+    const exp = express ? (PRICING && PRICING.addons && PRICING.addons.express ? PRICING.addons.express : 40) : 0;
     const sub = base + exp;
-    const del = delivery ? PRICING.addons.delivery : 0;
+    const del = delivery ? (PRICING && PRICING.addons && PRICING.addons.delivery ? PRICING.addons.delivery : 15) : 0;
     return { subtotal: base, expressCost: exp, deliveryCost: del, total: sub + del };
   }, [kg, type, express, delivery]);
 

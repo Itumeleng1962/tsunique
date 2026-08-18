@@ -1,60 +1,126 @@
+import { useState } from "react";
 import { PageHero } from "@/components/common/PageHero";
 import { Reveal } from "@/components/common/Motion";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { PricingCalculator } from "@/components/common/PricingCalculator";
+import { SEO } from "@/components/common/SEO";
+import { PaymentModal } from "@/components/common/PaymentModal";
 import { PRICING } from "@/data/plans";
 import { SERVICES } from "@/data/services";
 import { ZAR } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { Building2, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function Pricing() {
+  const [selectedService, setSelectedService] = useState(null);
+
   return (
     <>
-      <PageHero eyebrow="Pricing" title="Fair, transparent, per kilogram" lede="No hidden fees. Pay for what you wash, or subscribe for the best rate. Prices in South African Rand." />
+      <SEO title="Pricing & Rate Card | Dynamic Calculator" description="Transparent per-kg laundry pricing, dry cleaning rate card, commercial quotes, and dynamic pricing calculator." />
+
+      <PageHero
+        eyebrow="Pricing"
+        title="Fair, Transparent, Per Kilogram"
+        lede="No hidden fees. Pay per kilogram for everyday laundry, fixed rates for specialty items, or save up to 25% with a monthly subscription plan."
+      />
+
+      {/* Dynamic Calculator */}
       <section className="container-x py-16 lg:py-24">
-        <div className="mx-auto max-w-4xl"><Reveal><PricingCalculator /></Reveal></div>
+        <div className="mx-auto max-w-4xl">
+          <Reveal>
+            <PricingCalculator />
+          </Reveal>
+        </div>
       </section>
 
+      {/* Per-Service Rate Card */}
       <section className="bg-surface py-20 lg:py-28">
         <div className="container-x">
-          <SectionHeading center eyebrow="Rate card" title="Per-service pricing" />
-          <div className="mx-auto mt-12 max-w-3xl divide-y divide-line rounded-3xl border border-line bg-surface">
+          <SectionHeading center eyebrow="Rate card" title="Individual Laundry Services Pricing" />
+          <div className="mx-auto mt-12 max-w-4xl divide-y divide-line rounded-3xl border border-line bg-cloud/50">
             {SERVICES.map((s) => (
-              <div key={s.slug} className="flex items-center justify-between px-6 py-5">
+              <div key={s.slug} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 px-6 py-5 hover:bg-surface/80 transition-colors">
                 <div className="flex items-center gap-4">
-                  <s.icon className="h-5 w-5 text-gold" strokeWidth={1.5} />
-                  <div><p className="font-medium text-cream">{s.title}</p><p className="text-xs text-[#9A9A9A]">{s.tagline}</p></div>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/10">
+                    <s.icon className="h-5 w-5 text-gold" strokeWidth={1.5} />
+                  </span>
+                  <div>
+                    <p className="font-serif text-lg text-cream">{s.title}</p>
+                    <p className="text-xs text-[#9A9A9A]">{s.tagline} · <span className="text-gold font-medium">{s.turnaround} SLA</span></p>
+                  </div>
                 </div>
-                <span className="text-sm text-[#9A9A9A]">from <b className="font-serif text-lg text-cream">{s.from ? ZAR(s.from) : "Free"}</b> <span className="text-xs">{s.unit}</span></span>
+                <div className="flex items-center gap-4 self-end sm:self-center">
+                  <span className="text-sm text-[#9A9A9A]">
+                    from <b className="font-serif text-xl text-cream">{s.from ? ZAR(s.from) : "Free"}</b> <span className="text-xs">{s.unit}</span>
+                  </span>
+                  <button
+                    onClick={() => setSelectedService(s)}
+                    className="rounded-full bg-gold/10 border border-gold/30 px-4 py-1.5 text-xs font-semibold text-gold hover:bg-gold hover:text-white transition-all"
+                  >
+                    Select
+                  </button>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Commercial & Corporate Laundry Pricing */}
       <section className="container-x py-20 lg:py-28">
-        <SectionHeading center eyebrow="Add-ons" title="Special services" lede="Beyond the everyday — bags, curtains, stain treatment and express, all at transparent rates." />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PRICING.special.map((c, i) => (
-            <Reveal key={c.label} delay={i * 0.06}>
-              <div className="rounded-3xl border border-line bg-surface p-6 text-center transition-all hover:-translate-y-2 hover:shadow-[0_16px_60px_rgba(0,0,0,0.05)]">
-                <p className="font-serif text-4xl font-light text-gold">{c.price}</p>
-                <p className="text-xs text-[#9A9A9A]">{c.unit}</p>
-                <p className="mt-3 text-sm font-medium text-cream">{c.label}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal className="mt-12">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 rounded-3xl border border-gold bg-gold/5 p-8 text-center sm:flex-row sm:justify-between sm:text-left">
-            <div>
-              <p className="font-serif text-2xl text-cream">Free collection &amp; delivery within 3 km</p>
-              <p className="mt-1 text-sm text-[#9A9A9A]">Beyond 3 km just R15 · Plus 20% OFF every referral</p>
+        <div className="glass-card rounded-[2.5rem] border border-line p-8 lg:p-12 grid lg:grid-cols-2 gap-10 items-center">
+          <div className="space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-1.5">
+              <Building2 className="h-4 w-4" /> B2B Commercial Laundry
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl text-cream">Custom Rates for Hospitality & Businesses</h2>
+            <p className="text-sm text-[#9A9A9A] leading-relaxed">
+              We provide tailored high-volume laundry contracts for restaurants, hotels, Airbnb hosts, spas, and corporate offices with dedicated logistics.
+            </p>
+            <div className="space-y-2 text-xs text-cream pt-2">
+              <p className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Volume-based tiered discounts up to 35%</p>
+              <p className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Dedicated account manager & monthly tax invoices</p>
+              <p className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> Flexible 7-day scheduled collection routes</p>
             </div>
-            <Link to="/contact" className="shrink-0 rounded-full bg-ink px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-gold">Book a pickup</Link>
+            <div className="pt-4">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-xs font-semibold text-white hover:bg-surface hover:text-cream transition-all">
+                Request Commercial Quote <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
-        </Reveal>
+          <div className="rounded-2xl overflow-hidden border border-line h-72">
+            <img src="https://images.unsplash.com/photo-1604335398980-ededcadcc37d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1000" alt="Commercial Laundry" className="h-full w-full object-cover" />
+          </div>
+        </div>
       </section>
+
+      {/* Specialty Add-Ons */}
+      <section className="bg-surface py-20 lg:py-28">
+        <div className="container-x">
+          <SectionHeading center eyebrow="Add-ons" title="Specialty Items & Additional Charges" lede="Bedding, blankets, bags, stain pre-treatments, and same-day express processing." />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {PRICING.special.map((c, i) => (
+              <Reveal key={c.label} delay={i * 0.05}>
+                <div className="rounded-3xl border border-line bg-cloud p-6 text-center transition-all hover:-translate-y-2 hover:bg-surface">
+                  <p className="font-serif text-3xl font-light text-gold">{c.price}</p>
+                  <p className="text-[11px] text-[#9A9A9A]">{c.unit}</p>
+                  <p className="mt-3 text-xs font-medium text-cream">{c.label}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Payment Modal */}
+      {selectedService && (
+        <PaymentModal
+          isOpen={!!selectedService}
+          onClose={() => setSelectedService(null)}
+          item={selectedService}
+          type="service"
+        />
+      )}
     </>
   );
 }

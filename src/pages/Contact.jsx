@@ -2,9 +2,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Share2 } from "lucide-react";
 import { PageHero } from "@/components/common/PageHero";
 import { Reveal } from "@/components/common/Motion";
+import { SEO } from "@/components/common/SEO";
 import { BRAND } from "@/lib/constants";
 
 const schema = z.object({
@@ -25,7 +26,10 @@ export default function Contact() {
 
   return (
     <>
-      <PageHero eyebrow="Get in touch" title="We'd love to hear from you" lede="Questions, quotes or a quick hello — reach out and a real human will reply fast." />
+      <SEO title="Contact Us & Store Location" description="Get in touch with TS Unique Laundry Services in Katlehong. Contact form, operating hours, phone, email, and interactive Google Map." />
+
+      <PageHero eyebrow="Get in touch" title="We'd love to hear from you" lede="Questions, subscription quotes or custom commercial inquiries — reach out and a real human will reply fast." />
+
       <section className="container-x py-16 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           {/* Info + map */}
@@ -36,14 +40,26 @@ export default function Contact() {
               <InfoCard icon={MapPin} label="Visit us" value={BRAND.address} />
               <InfoCard icon={MessageCircle} label="WhatsApp" value="Chat now" href={`https://wa.me/${BRAND.whatsapp}`} />
             </div>
+
             <div className="rounded-3xl border border-line bg-surface p-6">
-              <div className="flex items-center gap-2 text-gold"><Clock className="h-5 w-5" strokeWidth={1.5} /><span className="text-xs font-bold uppercase tracking-wider">Business hours</span></div>
+              <div className="flex items-center gap-2 text-gold"><Clock className="h-5 w-5" strokeWidth={1.5} /><span className="text-xs font-bold uppercase tracking-wider">Business operating hours</span></div>
               <ul className="mt-4 space-y-2">
                 {BRAND.hours.map((h) => (
                   <li key={h.day} className="flex justify-between text-sm"><span className="text-[#9A9A9A]">{h.day}</span><span className="font-medium text-cream">{h.time}</span></li>
                 ))}
               </ul>
             </div>
+
+            {/* Social Links */}
+            <div className="rounded-3xl border border-line bg-surface p-6 space-y-3">
+              <span className="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-1.5"><Share2 className="h-4 w-4" /> Connect On Social Media</span>
+              <div className="flex gap-3 text-xs">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="rounded-full bg-cloud border border-line px-4 py-2 text-cream hover:border-gold">Instagram</a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="rounded-full bg-cloud border border-line px-4 py-2 text-cream hover:border-gold">Facebook</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="rounded-full bg-cloud border border-line px-4 py-2 text-cream hover:border-gold">LinkedIn</a>
+              </div>
+            </div>
+
             <div className="relative h-64 overflow-hidden rounded-3xl border border-line bg-cloud" data-testid="map-embed">
               <iframe
                 title="TS Unique Laundry location"
@@ -59,16 +75,16 @@ export default function Contact() {
           {/* Form */}
           <Reveal delay={0.1}>
             <form onSubmit={handleSubmit(onSubmit)} className="rounded-3xl border border-line bg-surface p-8 lg:p-10" data-testid="contact-form">
-              <h2 className="font-serif text-3xl font-light text-cream">Send a message</h2>
+              <h2 className="font-serif text-3xl font-light text-cream">Send an online inquiry</h2>
               <div className="mt-8 space-y-5">
-                <Field label="Full name" error={errors.name}><input {...register("name")} data-testid="contact-name" className="input-field" placeholder="Your name" /></Field>
+                <Field label="Full name" error={errors.name}><input {...register("name")} data-testid="contact-name" className="input-field" placeholder="Your full name" /></Field>
                 <div className="grid gap-5 sm:grid-cols-2">
-                  <Field label="Email" error={errors.email}><input {...register("email")} data-testid="contact-email" className="input-field" placeholder="you@email.co.za" /></Field>
-                  <Field label="Phone" error={errors.phone}><input {...register("phone")} data-testid="contact-phone" className="input-field" placeholder="+27 ..." /></Field>
+                  <Field label="Email address" error={errors.email}><input {...register("email")} data-testid="contact-email" className="input-field" placeholder="you@email.co.za" /></Field>
+                  <Field label="Phone number" error={errors.phone}><input {...register("phone")} data-testid="contact-phone" className="input-field" placeholder="+27 ..." /></Field>
                 </div>
-                <Field label="Message" error={errors.message}><textarea {...register("message")} data-testid="contact-message" rows={5} className="input-field resize-none" placeholder="How can we help?" /></Field>
-                <button type="submit" disabled={isSubmitting} data-testid="contact-submit" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-gold disabled:opacity-60">
-                  {isSubmitting ? "Sending..." : <>Send message <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></>}
+                <Field label="Message / Order Details" error={errors.message}><textarea {...register("message")} data-testid="contact-message" rows={5} className="input-field resize-none" placeholder="How can we assist you with laundry services or subscriptions?" /></Field>
+                <button type="submit" disabled={isSubmitting} data-testid="contact-submit" className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-surface hover:text-cream disabled:opacity-60">
+                  {isSubmitting ? "Sending Inquiry..." : <>Submit Inquiry <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></>}
                 </button>
               </div>
             </form>

@@ -7,8 +7,8 @@ export const BRAND = {
   email: "loudlyclean@gmail.com",
   address: "85 Matlala Street, Phadima, Katlehong",
   hours: [
-    { day: "Sun – Thu", time: "07:00 – 19:00" },
-    { day: "Fri – Sat", time: "07:00 – 22:00" },
+    { day: "Sunday to Thursday", time: "7:00 AM – 7:00 PM (07:00 – 19:00)" },
+    { day: "Friday and Saturday", time: "7:00 AM – 10:00 PM (07:00 – 22:00)" },
   ],
   socials: {
     tiktok: "https://www.tiktok.com/@loudlyclean?_r=1&_t=ZS-98WYxUOYcb9",
