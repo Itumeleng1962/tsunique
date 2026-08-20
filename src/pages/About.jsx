@@ -5,12 +5,12 @@ import { Counter } from "@/components/common/Counter";
 import { SEO } from "@/components/common/SEO";
 import { STATS, COMPANY_PROFILE } from "@/data/content";
 import { IMAGES } from "@/lib/constants";
-import { Heart, Target, Sparkles, ShieldCheck, CheckCircle2, History, Users } from "lucide-react";
+import { Heart, Target, Sparkles, ShieldCheck, CheckCircle2, History } from "lucide-react";
 
 export default function About() {
   return (
     <>
-      <SEO title="About Us | Company Profile & Mission" description="Learn about TS Unique Laundry Services — our vision, mission, company history, executive team, and service commitments across Katlehong." />
+      <SEO title="About Us | Company Profile & Mission" description="Learn about TS Unique Laundry Services — our vision, mission, company history, and service commitments across Katlehong." />
       
       <PageHero
         eyebrow="Our story"
@@ -80,26 +80,6 @@ export default function About() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* TEAM INTRODUCTION */}
-      <section className="container-x py-20 lg:py-28">
-        <SectionHeading center eyebrow="Leadership Team" title="Meet the People Behind TS Laundry" />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {COMPANY_PROFILE.team.map((m, i) => (
-            <Reveal key={m.name} delay={i * 0.1}>
-              <div className="group overflow-hidden rounded-3xl border border-line bg-surface p-6 text-center space-y-4">
-                <div className="mx-auto h-36 w-36 overflow-hidden rounded-full border-2 border-gold/30">
-                  <img src={m.image} alt={m.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                </div>
-                <div>
-                  <h4 className="font-serif text-xl text-cream">{m.name}</h4>
-                  <p className="text-xs text-gold font-medium mt-1">{m.role}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
         </div>
       </section>
 

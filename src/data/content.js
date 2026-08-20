@@ -68,9 +68,9 @@ export const COMPANY_PROFILE = {
     { name: "Alex Doe", role: "Logistics Coordinator", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&q=85&w=400" },
   ],
   commitments: [
-    "Garment Protection Warranty up to R2,500 per order",
-    "100% On-Time Turnaround Guarantee or your next wash is free",
-    "Hypoallergenic & Eco-Safe Detergent Standard",
+    "Compensation policy up to 3x item charge for verified claims",
+    "Professional stain and fabric treatment standards",
+    "Hypoallergenic & Eco-Safe Detergents",
     "Dedicated Customer Support via Phone, Email & WhatsApp",
   ],
 };
@@ -144,31 +144,38 @@ export const FAQS = [
   {
     category: "Lost & Damaged Garments",
     q: "What is your lost or damaged garment policy?",
-    a: "In the rare event of damage or loss during processing, TS Laundry provides a Garment Insurance Coverage of up to R2,500 per order. All items are tagged and photographed upon entry at our facility.",
+    a: "All clothes are handled with utmost care. In the event of loss or damage, compensation is strictly limited to up to three times (3x) the laundry charge of that specific item. Claims must be submitted within 2 days with proof of receipt. TS Unique Laundry is not responsible for damage from manufacturer defects, weak/pre-existing damage, items left in pockets, or natural disasters/fire.",
   },
   {
     category: "Lost & Damaged Garments",
-    q: "How do I lodge a claim for a missing or damaged item?",
-    a: "Simply click 'Lodge Support Query' in your Customer Portal within 48 hours of delivery. Our support team will inspect intake footage and resolve claims within 2 business days.",
+    q: "How do I claim for an item and what is the timeframe?",
+    a: "Lost or damaged items must be claimed within 2 days of delivery. Proof of receipt is required. Additionally, by settling your invoice you legally acknowledge and agree that the quantity of laundry items listed on the invoice is correct.",
+  },
+
+  // Turnaround & Delivery
+  {
+    category: "Turnaround Times",
+    q: "What are your collection and delivery hours?",
+    a: "TS Unique Laundry delivers or collects laundry between 6:00 PM and 8:00 PM (18:00 – 20:00). You are also welcome to bring or collect your laundry in person at our store (85 Matlala St, Palime, Katlehong) from 7:00 AM till 7:00 PM. Note: An amount of R50 collection/delivery fee will be charged upon cancellation of services.",
   },
 
   // Refund Policy
   {
     category: "Refund Policy",
-    q: "What is your refund policy?",
-    a: "If you are unsatisfied with the wash quality, we will re-wash your entire load free of charge. If you cancel a subscription within 7 days of sign-up without using any washes, a 100% full refund is issued immediately.",
+    q: "What is your refund and cancellation policy?",
+    a: "Full payment of the invoice is required prior to the release of laundry. An amount of R50 collection/delivery fee is charged upon cancellation of services. Unclaimed items after 30 days will be considered abandoned and may be donated or disposed of.",
   },
 
   // Customer Responsibilities
   {
     category: "Customer Responsibilities",
     q: "What are my responsibilities before handing over laundry?",
-    a: "Please ensure all pockets are emptied (coins, keys, lip balm), delicate items are bagged separately, and any pre-existing stains or care instructions are flagged in your order notes.",
+    a: "Please check and empty all pockets before submitting laundry — TS Unique Laundry is not liable for lost or damaged items left inside. Delicate items, leather, suede, and specialty materials must be declared and are handled at customer's risk.",
   },
   {
     category: "Customer Responsibilities",
-    q: "Do I need to sort my laundry before collection?",
-    a: "Not necessarily! Our facility team sorts by color and fabric type. However, separating dry-clean items from wash-and-fold items helps streamline quick intake.",
+    q: "Do large or specialty items require extra time?",
+    a: "Yes. Curtains, towels, white items, bags, blankets, and large items may require extended processing time. Stains will be treated to the best of our professional ability, but complete removal cannot be guaranteed.",
   },
 ];
 

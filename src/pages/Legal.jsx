@@ -10,11 +10,11 @@ const SECTIONS = {
     { h: "Your rights", p: "You may access, correct or delete your personal information at any time by contacting hello@tsuniquelaundry.co.za." },
   ],
   terms: [
-    { h: "Acceptance of terms", p: "By using TS Unique Laundry's website and services, you agree to these terms. If you do not agree, please refrain from using our services." },
-    { h: "Services", p: "We provide laundry collection, cleaning and delivery. Turnaround times are estimates and may vary during peak periods or adverse weather — though rain or not, we serve." },
-    { h: "Payments & subscriptions", p: "Subscriptions are billed monthly and may be paused or cancelled anytime. All prices are in South African Rand and include applicable taxes unless stated otherwise." },
-    { h: "Garment care & liability", p: "We handle every item with insured care. Our liability for loss or damage is limited as set out in our garment-protection policy. Please declare special garments in advance." },
-    { h: "Cancellations", p: "Pickups can be rescheduled up to 2 hours before the collection window at no charge. Missed collections may incur a small re-scheduling fee." },
+    { h: "1. General Guidelines & Risk", p: "All clothes are handled with the utmost care, but laundry/washing is done at the customer's own risk. TS Unique Laundry is not responsible for color fading, shrinkage, or damage caused by manufacturer defects. Items with pre-existing damage or weak fabric may not withstand the washing process. Please check all pockets before submitting laundry; TS Unique Laundry is not liable for lost or damaged items left inside. Stains will be treated to the best of our professional ability, but complete removal cannot be guaranteed." },
+    { h: "2. Special Items & Fabrics", p: "Delicate fabrics require special handling and may incur additional charges. Leather, suede, and specialty materials are washed at the customer's risk. Curtains, towels, white items, bags, blankets, and large items may require extended processing time." },
+    { h: "3. Collection and Delivery Policy", p: "TS Unique Laundry will only deliver or collect your laundry between 6:00 PM and 8:00 PM (18:00 – 20:00). However, customers are welcome to bring or collect their laundry at our business address (85 Matlala St, Palime, Katlehong) from 7:00 AM till 7:00 PM (07:00 – 19:00). An amount of R50 collection/delivery fee will be charged upon CANCELLATION of services." },
+    { h: "4. Liability & Garment Claims", p: "Compensation for lost or damaged items will not exceed three times (3x) the laundry charge of the specific item. Proof of receipt is required for any claim. Lost items must be claimed within 2 days. TS Unique Laundry is not responsible for items damaged or lost due to natural disasters or fire." },
+    { h: "5. Invoicing, Payment & Unclaimed Items", p: "By settling your invoice you legally acknowledge and agree that the quantity of the laundry items listed on the invoice is correct. Full payment of the invoice is required prior to the release of the laundry to the customer. Unclaimed items after 30 days will be considered abandoned and may be donated or disposed of." },
   ],
 };
 

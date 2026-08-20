@@ -87,6 +87,7 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-white/40 sm:flex-row">
           <p>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
           <div className="flex gap-6">
+            <Link to="/disclaimer" className="transition-colors hover:text-white">Disclaimer</Link>
             <Link to="/privacy" className="transition-colors hover:text-white">Privacy Policy</Link>
             <Link to="/terms" className="transition-colors hover:text-white">Terms of Service</Link>
           </div>

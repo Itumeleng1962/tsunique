@@ -13,7 +13,7 @@ import { SEO } from "@/components/common/SEO";
 import { SERVICES } from "@/data/services";
 import { PLANS } from "@/data/plans";
 import { TESTIMONIALS, STATS, FAQS, STEPS } from "@/data/content";
-import { IMAGES } from "@/lib/constants";
+import { IMAGES, BRAND } from "@/lib/constants";
 const IMG = IMAGES;
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
@@ -279,15 +279,15 @@ export default function Home() {
               Drop off your hamper in person or meet our garment care specialists. Operating Monday through Saturday with express counter intake.
             </p>
             <div className="space-y-2 text-xs text-cream pt-2">
-              <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold" /> 1482 Masakhane St, Katlehong, Johannesburg, 1431</p>
-              <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> +27 (0) 11 892 4000</p>
-              <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> info@tsuniquelaundry.co.za</p>
+              <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold" /> {BRAND.address}</p>
+              <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> {BRAND.phone}</p>
+              <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> {BRAND.email}</p>
             </div>
           </div>
           <div className="h-64 rounded-3xl overflow-hidden border border-line">
             <iframe
               title="TS Laundry Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114400.413725514!2d28.125712!3d-26.331451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9514e82b7b51b7%3A0x6b10702652a921d7!2sKatlehong!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              src="https://www.google.com/maps?q=85+Matlala+St,+Palime,+Katlehong,+1431&z=15&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

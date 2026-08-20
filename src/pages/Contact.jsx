@@ -63,7 +63,7 @@ export default function Contact() {
             <div className="relative h-64 overflow-hidden rounded-3xl border border-line bg-cloud" data-testid="map-embed">
               <iframe
                 title="TS Unique Laundry location"
-                src="https://www.google.com/maps?q=85+Matlala+Street,+Phadima,+Katlehong&z=15&output=embed"
+                src="https://www.google.com/maps?q=85+Matlala+St,+Palime,+Katlehong,+1431&z=15&output=embed"
                 className="h-full w-full border-0 grayscale-[0.2]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

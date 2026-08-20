@@ -22,6 +22,7 @@ const HowItWorks = lazy(() => import("@/pages/HowItWorks"));
 const About = lazy(() => import("@/pages/About"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
 const Contact = lazy(() => import("@/pages/Contact"));
+const Disclaimer = lazy(() => import("@/pages/Disclaimer"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 const Login = lazy(() => import("@/pages/auth/Login"));
@@ -60,6 +61,7 @@ function AppRoutes() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/privacy" element={<LegalPrivacy />} />
           <Route path="/terms" element={<LegalTerms />} />
         </Route>
