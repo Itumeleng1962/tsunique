@@ -273,8 +273,8 @@ export default function Home() {
       <section className="bg-surface py-16 border-t border-line">
         <div className="container-x grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-1.5"><MapPin className="h-4 w-4" /> Store Location</span>
-            <h2 className="font-serif text-3xl text-cream">Visit Our Katlehong Hub</h2>
+            <span className="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-1.5"><MapPin className="h-4 w-4" /> Location</span>
+            {/* <h2 className="font-serif text-3xl text-cream">Visit Our Katlehong Hub</h2> */}
             <p className="text-xs text-[#9A9A9A] leading-relaxed">
               Drop off your hamper in person or meet our garment care specialists. Operating Monday through Saturday with express counter intake.
             </p>
