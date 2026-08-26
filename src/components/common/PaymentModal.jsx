@@ -144,7 +144,7 @@ export function PaymentModal({ isOpen, onClose, item, type = "subscription" }) {
 
               <div className="flex items-center justify-between text-xs text-[#9A9A9A] pt-2">
                 <span className="flex items-center gap-1"><Lock className="h-3.5 w-3.5 text-gold" /> 256-Bit SSL Encrypted</span>
-                <span>PayFast / Ozow Verified</span>
+                <span>PayFast / Yoco Verified</span>
               </div>
 
               <button

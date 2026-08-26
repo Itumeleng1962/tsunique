@@ -74,7 +74,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-md"
           >
-            <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Shine, We Serve · Est 2021
+            <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Not, We Serve · Est 2021
           </motion.span>
 
           <motion.h1

@@ -15,7 +15,7 @@ export default function About() {
       <PageHero
         eyebrow="Our story"
         title="Founded on a simple belief: your time is precious"
-        lede="Established in Katlehong, TS Unique Laundry Management began with one promise — clean, fresh, professionally handled laundry that makes everyday life easier. Rain or Shine, We Serve."
+        lede="Established in Katlehong, TS Unique Laundry Management began with one promise — clean, fresh, professionally handled laundry that makes everyday life easier. Rain or Not, We Serve."
       />
 
       <section className="container-x py-16 lg:py-24">
@@ -42,7 +42,7 @@ export default function About() {
             <div className="rounded-2xl border border-line bg-cloud/50 p-6 space-y-2">
               <span className="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-1.5"><Sparkles className="h-4 w-4" /> Company Promise</span>
               <p className="text-sm leading-relaxed text-cream font-serif italic">
-                "Rain or Shine, We Serve — transparent per-kg tracking, insured garment handling, and guaranteed turnaround times."
+                "Rain or Not, We Serve — transparent per-kg tracking, insured garment handling, and guaranteed turnaround times."
               </p>
             </div>
           </Reveal>

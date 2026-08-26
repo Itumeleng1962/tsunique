@@ -1,7 +1,7 @@
 // Mock data powering the customer & admin dashboards
 export const CURRENT_USER = {
-  name: "Naledi Mokoena",
-  email: "naledi@example.co.za",
+  name: "Client 001",
+  email: "client01@example.co.za",
   role: "customer",
   avatar:
     "https://images.unsplash.com/photo-1562337404-3044c84ac061?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
@@ -86,17 +86,17 @@ export const PLAN_DISTRIBUTION = [
 ];
 
 export const ADMIN_CUSTOMERS = [
-  { name: "Naledi Mokoena", email: "naledi@example.co.za", plan: "Family", spend: 5694, status: "Active" },
-  { name: "James Whitfield", email: "james@superhost.co.za", plan: "Plus", spend: 8994, status: "Active" },
-  { name: "Thandiwe Dlamini", email: "thandi@med.co.za", plan: "Standard", spend: 3594, status: "Active" },
-  { name: "Sipho Nkosi", email: "sipho@bistro.co.za", plan: "Premium", spend: 14994, status: "Active" },
-  { name: "Aisha Patel", email: "aisha@studio.co.za", plan: "Basic", spend: 1396, status: "Paused" },
+  { name: "Client 001", email: "client01@example.co.za", plan: "Family", spend: 5694, status: "Active" },
+  { name: "Client 002", email: "client02@superhost.co.za", plan: "Plus", spend: 8994, status: "Active" },
+  { name: "Client 003", email: "client03@med.co.za", plan: "Standard", spend: 3594, status: "Active" },
+  { name: "Client 004", email: "client04@bistro.co.za", plan: "Premium", spend: 14994, status: "Active" },
+  { name: "Client 005", email: "client05@studio.co.za", plan: "Basic", spend: 1396, status: "Paused" },
 ];
 
 export const ADMIN_ORDERS = [
-  { id: "TSU-1042", customer: "Naledi Mokoena", service: "Wash & Iron", kg: 6.2, status: "Delivered" },
-  { id: "TSU-1041", customer: "James Whitfield", service: "Commercial", kg: 22.0, status: "Processing" },
-  { id: "TSU-1040", customer: "Sipho Nkosi", service: "Restaurant Linen", kg: 31.5, status: "Collected" },
-  { id: "TSU-1039", customer: "Thandiwe Dlamini", service: "Express", kg: 3.1, status: "Out for delivery" },
-  { id: "TSU-1038", customer: "Aisha Patel", service: "Wash & Fold", kg: 4.8, status: "Scheduled" },
+  { id: "TSU-1042", customer: "Client 001", service: "Wash & Iron", kg: 6.2, status: "Delivered" },
+  { id: "TSU-1041", customer: "Client 002", service: "Commercial", kg: 22.0, status: "Processing" },
+  { id: "TSU-1040", customer: "Client 004", service: "Restaurant Linen", kg: 31.5, status: "Collected" },
+  { id: "TSU-1039", customer: "Client 003", service: "Express", kg: 3.1, status: "Out for delivery" },
+  { id: "TSU-1038", customer: "Client 005", service: "Wash & Fold", kg: 4.8, status: "Scheduled" },
 ];

@@ -17,6 +17,7 @@ export function PricingCalculator() {
   const [type, setType] = useState("washFold");
   const [express, setExpress] = useState(false);
   const [delivery, setDelivery] = useState(true);
+  const [deliveryDistance, setDeliveryDistance] = useState("under8");
 
   const { subtotal, expressCost, deliveryCost, total } = useMemo(() => {
     const weight = (kg && kg[0]) ? kg[0] : 1;
@@ -24,9 +25,9 @@ export function PricingCalculator() {
     const base = rate * weight;
     const exp = express ? (PRICING && PRICING.addons && PRICING.addons.express ? PRICING.addons.express : 40) : 0;
     const sub = base + exp;
-    const del = delivery ? (PRICING && PRICING.addons && PRICING.addons.delivery ? PRICING.addons.delivery : 15) : 0;
+    const del = delivery ? (deliveryDistance === "under8" ? 30 : 40) : 0;
     return { subtotal: base, expressCost: exp, deliveryCost: del, total: sub + del };
-  }, [kg, type, express, delivery]);
+  }, [kg, type, express, delivery, deliveryDistance]);
 
   return (
     <div
@@ -77,7 +78,31 @@ export function PricingCalculator() {
 
           <div className="space-y-3">
             <Toggle checked={express} onChange={setExpress} label="Express (same day)" note={`+${ZAR(PRICING.addons.express)} flat`} testid="calc-express" />
-            <Toggle checked={delivery} onChange={setDelivery} label="Collection & delivery" note={`Free within ${PRICING.deliveryFreeKm}km · else ${ZAR(PRICING.addons.delivery)}`} testid="calc-delivery" />
+            <Toggle checked={delivery} onChange={setDelivery} label="Collection & delivery" note={`R30 under 8km · R40 over 8km`} testid="calc-delivery" />
+            {delivery && (
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setDeliveryDistance("under8")}
+                  className={`flex-1 rounded-xl border px-3 py-2 text-xs font-medium transition-all ${
+                    deliveryDistance === "under8"
+                      ? "border-gold bg-gold/10 text-cream"
+                      : "border-line bg-surface text-[#9A9A9A] hover:border-ink/30"
+                  }`}
+                >
+                  Under 8km (R30)
+                </button>
+                <button
+                  onClick={() => setDeliveryDistance("over8")}
+                  className={`flex-1 rounded-xl border px-3 py-2 text-xs font-medium transition-all ${
+                    deliveryDistance === "over8"
+                      ? "border-gold bg-gold/10 text-cream"
+                      : "border-line bg-surface text-[#9A9A9A] hover:border-ink/30"
+                  }`}
+                >
+                  Over 8km (R40)
+                </button>
+              </div>
+            )}
           </div>
         </div>
 

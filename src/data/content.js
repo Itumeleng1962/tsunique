@@ -69,7 +69,6 @@ export const COMPANY_PROFILE = {
   ],
   commitments: [
     "Compensation policy up to 3x item charge for verified claims",
-    "Professional stain and fabric treatment standards",
     "Hypoallergenic & Eco-Safe Detergents",
     "Dedicated Customer Support via Phone, Email & WhatsApp",
   ],
@@ -96,7 +95,7 @@ export const FAQS = [
   {
     category: "Subscription Rules",
     q: "What happens if I don't use all my weight allowance in a cycle?",
-    a: "Depending on your plan tier, unused weight rolls over to the next cycle (up to 15% on Family Plan and 25% on Executive Premium). Any excess weight beyond the plan limit is billed at a discounted per-kg add-on rate.",
+    a: "Unused weight does not roll over to the next cycle. Instead, we give you a one-week grace period to use your remaining allowance, after which your subscription for that cycle fades.",
   },
   {
     category: "Subscription Rules",
@@ -108,7 +107,7 @@ export const FAQS = [
   {
     category: "Payment Methods",
     q: "What payment methods are supported on the website?",
-    a: "We accept Debit cards, Credit cards (Visa, Mastercard), Instant EFT via PayFast/Ozow, and supported Mobile Payment apps. Recurring subscription payments are securely processed automatically every 5-week cycle.",
+    a: "We accept Debit cards, Credit cards (Visa, Mastercard), Instant EFT via PayFast/Yoco, and supported Mobile Payment apps. Recurring subscription payments are securely processed automatically every 5-week cycle.",
   },
   {
     category: "Payment Methods",
@@ -120,7 +119,7 @@ export const FAQS = [
   {
     category: "Turnaround Times",
     q: "What are your standard and express turnaround times?",
-    a: "Standard Wash & Fold or Wash & Iron is processed within 24 to 48 hours. Dry Cleaning and Bulky Bedding take 48 hours, while Curtains take 72 hours. Same-Day Express Service is delivered in 6 to 12 hours if dropped off before 09:00 AM.",
+    a: "Standard Wash & Fold or Wash & Iron is processed within 24 to 48 hours. Bulky Bedding takes 48 hours, while Curtains take 72 hours. Same-Day Express Service is delivered in 6 to 12 hours if dropped off before 09:00 AM.",
   },
   {
     category: "Turnaround Times",
@@ -134,11 +133,7 @@ export const FAQS = [
     q: "What garments and items do you accept?",
     a: "We clean everyday wardrobe items, suits, dresses, delicates, bedding, linen, blankets, duvets, curtains, school uniforms, aprons, and commercial towels. Items with hazardous chemicals, oil spills, or pet contamination must be declared prior to pickup.",
   },
-  {
-    category: "Accepted Items",
-    q: "Do you clean dry-clean-only or delicate silk items?",
-    a: "Yes. Our Dry Cleaning & Delicate Care department uses specialised low-temperature solvents specifically formulated for silk, cashmere, wool, and structured suits.",
-  },
+
 
   // Lost & Damaged Garments
   {

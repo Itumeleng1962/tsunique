@@ -43,25 +43,7 @@ export const SERVICES = [
       "Priority fabric care",
     ],
   },
-  {
-    slug: "dry-cleaning",
-    icon: Sparkle,
-    title: "Dry Cleaning",
-    tagline: "Expert care for delicate & luxury garments",
-    from: 45,
-    unit: "per item",
-    turnaround: "48 Hours",
-    image:
-      "https://images.unsplash.com/photo-1545127398-14699f92334b?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
-    description:
-      "Specialized dry cleaning for suits, evening dresses, silk, wool coats, and delicate fabrics. Eco-friendly solvents safely remove stains while protecting delicate textures.",
-    benefits: [
-      "Eco-friendly non-toxic solvents",
-      "Stain pre-treatment included",
-      "Form-preserving steam press",
-      "Hand-inspected before dispatch",
-    ],
-  },
+
   {
     slug: "ironing-services",
     icon: PanelTop,

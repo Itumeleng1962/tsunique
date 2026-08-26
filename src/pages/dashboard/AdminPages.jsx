@@ -182,6 +182,12 @@ export function AdminOrders() {
                       Ironing
                     </button>
                     <button
+                      onClick={() => updateStatus(o.id, "Ready for Collection")}
+                      className="rounded bg-cloud px-2 py-1 text-[10px] text-cream hover:bg-gold hover:text-white"
+                    >
+                      Ready
+                    </button>
+                    <button
                       onClick={() => updateStatus(o.id, "Delivered")}
                       className="rounded bg-gold/20 px-2 py-1 text-[10px] text-gold font-bold hover:bg-gold hover:text-white"
                     >
@@ -280,8 +286,8 @@ export function AdminContent() {
           <Panel title="Customer Online Enquiries Inbox">
             <div className="space-y-3">
               {[
-                { name: "Sipho Khumalo", email: "sipho@gmail.com", date: "Today 10:15", subject: "Commercial Laundry Quote for Restaurant" },
-                { name: "Jessica Taylor", email: "jessica@airbnb.co.za", date: "Yesterday 16:40", subject: "Linen Changeover Schedule Query" },
+                { name: "Client Enquiry A", email: "client_a@gmail.com", date: "Today 10:15", subject: "Commercial Laundry Quote for Restaurant" },
+                { name: "Client Enquiry B", email: "client_b@airbnb.co.za", date: "Yesterday 16:40", subject: "Linen Changeover Schedule Query" },
               ].map((enq, idx) => (
                 <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-xl border border-line bg-surface p-4">
                   <div className="space-y-1">
