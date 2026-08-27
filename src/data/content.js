@@ -1,39 +1,35 @@
 export const TESTIMONIALS = [
   {
-    name: "Naledi Mokoena",
-    role: "Marketing Director",
-    avatar:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
+    name: "Petronella Mokoena",
     quote:
-      "I honestly forgot laundry was a chore. It vanishes on Tuesday and reappears folded like a boutique hotel. The Family plan pays for itself in time alone.",
+      "Their service is very impressive, reliable and efficient. Rain or shine, I never worry because I know they will deliver. They don't lose a thing, not even a single sock — that's how good they are. I would choose their service over and over again.",
     rating: 5,
+    source: "google",
+    date: "8 months ago",
   },
   {
-    name: "James Whitfield",
-    role: "Airbnb Superhost",
-    avatar:
-      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
+    name: "TumzA Thulo",
     quote:
-      "Managing five listings, turnaround is everything. TS Unique has never missed a collection. My linen looks five-star, guests notice, reviews prove it.",
+      "Good service, my laundry was well packed and clean. I've found myself a good laundry.",
     rating: 5,
+    source: "google",
+    date: "9 months ago",
   },
   {
-    name: "Thandiwe Dlamini",
-    role: "Medical Registrar",
-    avatar:
-      "https://images.unsplash.com/photo-1662850886700-4ec19bd30d11?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
+    name: "Rapelang Modise",
     quote:
-      "Between night shifts I have zero time. The express lane got my scrubs back same-day, spotless. This service is quietly life-changing.",
+      "Five stars — the kind of service that keeps you coming back. Professional, careful and always on time.",
     rating: 5,
+    source: "google",
+    date: "8 months ago",
   },
   {
-    name: "Sipho Nkosi",
-    role: "Restaurant Owner",
-    avatar:
-      "https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
+    name: "Ayanda Mahlangu",
     quote:
-      "Consistent, invoiced, reliable. Our aprons and tablecloths are always crisp for service. A genuine partner, not just a supplier.",
+      "Outstanding laundry service! Clean, fresh and perfectly folded every single time. Highly recommended to anyone in Katlehong.",
     rating: 5,
+    source: "google",
+    date: "8 months ago",
   },
 ];
 

@@ -9,9 +9,10 @@ import { ZAR } from "@/lib/utils";
 const ROWS = [
   { label: "Monthly kilograms", get: (p) => `${p.kg}kg` },
   { label: "Collections / month", get: (p) => p.washes },
-  { label: "Ironing included", get: (p) => p.id !== "basic" },
-  { label: "Free delivery", get: (p) => "Within 3 km" },
-  { label: "Express lane", get: (p) => ["family", "plus", "premium"].includes(p.id) },
+  { label: "Wash, Dry & Fold", get: (p) => true },
+  { label: "Free delivery & collection", get: (p) => "Within 3 km" },
+  { label: "Ironing (add-on)", get: (p) => "R8.50/kg" },
+  { label: "Express lane", get: (p) => ["plus", "premium"].includes(p.id) },
   { label: "Dedicated manager", get: (p) => p.id === "premium" },
 ];
 

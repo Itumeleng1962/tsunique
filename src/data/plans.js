@@ -1,4 +1,5 @@
 // Subscription plans (5-week cycle, 4 washes per cycle) matching TS Laundry PRD Specification (ZAR).
+// NOTE: Ironing is NEVER included in any subscription. Charged separately at R8.50/kg on request.
 export const PLANS = [
   {
     id: "basic",
@@ -14,11 +15,11 @@ export const PLANS = [
     features: [
       "Up to 30 kg total allowance",
       "4 washes included per 5-week cycle",
-      "Wash, Dry, Steam Iron & Fold",
+      "Wash, Dry & Fold",
       "Free collection & delivery within 3 km",
       "Priority WhatsApp customer support",
     ],
-    excluded: ["Ironing service included", "Express same-day processing", "Dedicated account manager"],
+    excluded: ["Express same-day processing", "Dedicated account manager"],
   },
   {
     id: "standard",
@@ -34,7 +35,7 @@ export const PLANS = [
     features: [
       "Up to 42 kg total allowance",
       "4 washes included per 5-week cycle",
-      "Wash, Dry, Steam Iron & Fold",
+      "Wash, Dry & Fold",
       "Free collection & delivery within 3 km",
       "Priority WhatsApp customer support",
     ],
@@ -49,12 +50,12 @@ export const PLANS = [
     cycle: "5-Week Cycle",
     tagline: "Built for busy household routines",
     recommended: true,
-    description: "Complete wash, press, and fold service for households, including school uniforms and bed sheets.",
+    description: "Complete wash and fold service for households, including school uniforms and bed sheets.",
     terms: "Unused weight rolls over up to 15%. Max 13.25 kg per drop-off. Includes free stain pre-treatment.",
     features: [
       "Up to 53 kg total allowance",
       "4 washes included per 5-week cycle",
-      "Wash, Dry, Steam Iron & Fold",
+      "Wash, Dry & Fold",
       "Free collection & delivery within 3 km",
       "Priority WhatsApp customer support",
     ],
@@ -74,7 +75,7 @@ export const PLANS = [
     features: [
       "Up to 63 kg total allowance",
       "4 washes included per 5-week cycle",
-      "Wash, Dry, Steam Iron & Fold",
+      "Wash, Dry & Fold",
       "Free collection & delivery within 3 km",
       "Priority WhatsApp customer support",
     ],
@@ -94,7 +95,7 @@ export const PLANS = [
     features: [
       "Up to 76 kg total allowance",
       "4 washes included per 5-week cycle",
-      "Wash, Dry, Steam Iron & Fold",
+      "Wash, Dry & Fold",
       "Free collection & delivery within 3 km",
       "Priority WhatsApp customer support",
     ],
