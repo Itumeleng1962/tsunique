@@ -4,7 +4,7 @@ export const CURRENT_USER = {
   email: "client01@example.co.za",
   role: "customer",
   avatar:
-    "https://images.unsplash.com/photo-1562337404-3044c84ac061?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
+    "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
   plan: "Family",
   planPrice: 850,
   kgIncluded: 53,

@@ -98,7 +98,7 @@ export default function DashboardHome() {
             </Panel>
             <div className="rounded-2xl border border-gold bg-gold/5 p-6">
               <Gift className="h-6 w-6 text-gold" strokeWidth={1.25} />
-              <p className="mt-3 font-serif text-lg text-cream">Give R60, get R60</p>
+              <p className="mt-3 font-serif text-lg text-cream">Give R30, get R30</p>
               <p className="mt-1 text-xs text-[#9A9A9A]">Share your code and earn credit on every friend who joins.</p>
               <Link to="/dashboard/referrals" className="mt-4 inline-block rounded-full bg-ink px-5 py-2.5 text-xs font-medium text-white">Invite friends</Link>
             </div>

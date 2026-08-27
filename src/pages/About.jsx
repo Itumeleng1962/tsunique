@@ -65,23 +65,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* BUSINESS HISTORY TIMELINE */}
-      <section className="bg-surface py-20 lg:py-28">
-        <div className="container-x">
-          <SectionHeading center eyebrow="Our Journey" title="Business Growth & Milestones" />
-          <div className="mt-16 grid gap-6 md:grid-cols-4">
-            {COMPANY_PROFILE.history.map((h, i) => (
-              <Reveal key={h.year} delay={i * 0.1}>
-                <div className="relative rounded-3xl border border-line bg-cloud p-6 space-y-2">
-                  <span className="font-serif text-3xl font-light text-gold">{h.year}</span>
-                  <h4 className="font-serif text-lg text-cream">{h.title}</h4>
-                  <p className="text-xs text-[#9A9A9A] leading-relaxed">{h.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* SERVICE COMMITMENTS */}
       <section className="bg-surface py-20 border-t border-line">

@@ -3,7 +3,7 @@ export const TESTIMONIALS = [
     name: "Naledi Mokoena",
     role: "Marketing Director",
     avatar:
-      "https://images.unsplash.com/photo-1562337404-3044c84ac061?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
+      "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?crop=entropy&cs=srgb&fm=jpg&q=85&w=300",
     quote:
       "I honestly forgot laundry was a chore. It vanishes on Tuesday and reappears folded like a boutique hotel. The Family plan pays for itself in time alone.",
     rating: 5,
@@ -46,7 +46,7 @@ export const STATS = [
 
 export const COMPANY_PROFILE = {
   name: "TS Unique Laundry Services",
-  founded: "2021",
+  founded: "2025",
   tagline: "Redefining garment care through subscription convenience",
   vision: "To become the leading tech-enabled laundry subscription service across South Africa, delivering pristine garments with zero effort for every household and business.",
   mission: "To eliminate the friction of daily laundry by providing reliable, eco-friendly, and subscription-based laundry management that saves time, preserves fabric quality, and empowers busy lifestyle routines.",
@@ -56,17 +56,8 @@ export const COMPANY_PROFILE = {
     { title: "Eco Responsibility", desc: "100% biodegradable detergents, microplastic filtering, and water-reclaiming machines." },
     { title: "Reliability & Speed", desc: "Strict SLA turnarounds from 24h standard to 6-hour express processing." },
   ],
-  history: [
-    { year: "2021", title: "Founded in Katlehong", desc: "Started as a single storefront providing quality wash & fold to local residents." },
-    { year: "2022", title: "Launch of Subscriptions", desc: "Introduced monthly weight-based laundry subscription packages with doorstep collection." },
-    { year: "2024", title: "Commercial & Corporate Unit", desc: "Expanded capacity to serve Airbnb hosts, corporate offices, restaurants, and schools." },
-    { year: "2026", title: "Digital Customer Portal", desc: "Rolled out automated portal, dynamic pricing calculator, and real-time wash tracking system." },
-  ],
-  team: [
-    { name: "Jane Doe", role: "Founder & Managing Director", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&q=85&w=400" },
-    { name: "John Doe", role: "Head of Operations", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=85&w=400" },
-    { name: "Alex Doe", role: "Logistics Coordinator", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&q=85&w=400" },
-  ],
+  history: [],
+  team: [],
   commitments: [
     "Compensation policy up to 3x item charge for verified claims",
     "Hypoallergenic & Eco-Safe Detergents",
@@ -151,7 +142,7 @@ export const FAQS = [
   {
     category: "Turnaround Times",
     q: "What are your collection and delivery hours?",
-    a: "TS Unique Laundry delivers or collects laundry between 6:00 PM and 8:00 PM (18:00 – 20:00). You are also welcome to bring or collect your laundry in person at our store (85 Matlala St, Palime, Katlehong) from 7:00 AM till 7:00 PM. Note: An amount of R50 collection/delivery fee will be charged upon cancellation of services.",
+    a: "TS Unique Laundry delivers or collects laundry between 6:00 PM and 8:00 PM (18:00 – 20:00). You are also welcome to bring or collect your laundry in person at our store (85 Matlala St, Phadima, Katlehong) from 7:00 AM till 7:00 PM. Note: An amount of R50 collection/delivery fee will be charged upon cancellation of services.",
   },
 
   // Refund Policy

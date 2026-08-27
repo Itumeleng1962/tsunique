@@ -74,7 +74,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-md"
           >
-            <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Not, We Serve · Est 2021
+            <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Not, We Serve · Est 2025
           </motion.span>
 
           <motion.h1
@@ -267,7 +267,6 @@ export default function Home() {
       <Phase2Showcase />
 
       {/* NEWSLETTER */}
-      <NewsletterGallery />
 
       {/* LOCATION & GOOGLE MAPS PREVIEW */}
       <section className="bg-surface py-16 border-t border-line">
@@ -287,7 +286,7 @@ export default function Home() {
           <div className="h-64 rounded-3xl overflow-hidden border border-line">
             <iframe
               title="TS Laundry Location Map"
-              src="https://www.google.com/maps?q=85+Matlala+St,+Palime,+Katlehong,+1431&z=15&output=embed"
+              src="https://www.google.com/maps?q=85+Matlala+Street,+Phadima,+Katlehong,+1431&z=15&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -317,31 +316,3 @@ export default function Home() {
   );
 }
 
-function NewsletterGallery() {
-  const shots = [IMAGES.heroTowels, IMAGES.ironingShirts, IMAGES.cleanTowels, IMAGES.towelStack, IMAGES.foldedShirts, IMAGES.ironBoard];
-  return (
-    <section className="container-x py-24 lg:py-32">
-      <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-        <Reveal>
-          <span className="mb-4 inline-block text-xs font-bold uppercase tracking-[0.25em] text-gold">Stay in the loop</span>
-          <h2 className="font-serif text-4xl font-light leading-tight text-cream sm:text-5xl">Fresh tips, straight to your inbox</h2>
-          <p className="mt-5 text-[#9A9A9A]">Care guides, member offers and the occasional laundry secret. No spam, unsubscribe anytime.</p>
-          <form onSubmit={(e) => e.preventDefault()} className="mt-8 flex max-w-md gap-3" data-testid="newsletter-form">
-            <input type="email" required placeholder="you@email.co.za" data-testid="newsletter-input" className="flex-1 rounded-full border border-line bg-surface px-6 py-3.5 text-sm outline-none transition-colors focus:border-gold" />
-            <button type="submit" data-testid="newsletter-submit" className="rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-gold">Subscribe</button>
-          </form>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="grid grid-cols-3 gap-3">
-            {shots.map((src, i) => (
-              <div key={i} className="group aspect-square overflow-hidden rounded-2xl">
-                <img src={src} alt="Instagram" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-center text-xs text-[#9A9A9A]">Follow @tsuniquelaundry</p>
-        </Reveal>
-      </div>
-    </section>
-  );
-}

@@ -120,8 +120,8 @@ export function Referrals() {
         <Reveal>
           <div className="noise relative overflow-hidden rounded-2xl bg-ink p-8 text-white">
             <Gift className="relative z-10 h-8 w-8 text-gold" strokeWidth={1.25} />
-            <p className="relative z-10 mt-4 font-serif text-3xl font-light">Give R60, get R60</p>
-            <p className="relative z-10 mt-2 text-sm text-white/60">Your friend gets R60 off their first month, and you earn R60 credit when they subscribe.</p>
+            <p className="relative z-10 mt-4 font-serif text-3xl font-light">Give R30, get R30</p>
+            <p className="relative z-10 mt-2 text-sm text-white/60">Your friend gets R30 off their first month, and you earn R30 credit when they subscribe.</p>
             <div className="relative z-10 mt-6 flex items-center gap-3 rounded-xl border border-white/15 bg-surface/5 p-4">
               <code className="flex-1 font-mono text-lg tracking-wider text-gold" data-testid="referral-code">{u.referralCode}</code>
               <button onClick={copy} data-testid="referral-copy" className="inline-flex items-center gap-1.5 rounded-full bg-gold px-4 py-2 text-xs font-medium text-white"><Copy className="h-3.5 w-3.5" strokeWidth={1.75} /> Copy</button>
