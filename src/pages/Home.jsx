@@ -235,7 +235,7 @@ export default function Home() {
           {/* Google Rating Badge */}
           <Reveal>
             <a
-              href="https://www.google.com/maps/place/?q=place_id:0x4c4ff0d8bffadb57"
+              href="https://www.google.com/search?q=ts+unique+laundry#lrd=0x1e951b7e63b27251:0x4c4ff0d8bffadb57,1,,,,"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex shrink-0 items-center gap-4 rounded-2xl border border-line bg-surface px-6 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
@@ -311,7 +311,7 @@ export default function Home() {
         {/* CTA to leave a review */}
         <Reveal className="mt-10 text-center">
           <a
-            href="https://www.google.com/maps/place/?q=place_id:0x4c4ff0d8bffadb57"
+            href="https://www.google.com/search?q=ts+unique+laundry#lrd=0x1e951b7e63b27251:0x4c4ff0d8bffadb57,1,,,,"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full border border-line bg-surface px-6 py-3 text-sm font-medium text-cream transition-all duration-300 hover:border-gold/40 hover:text-gold"
