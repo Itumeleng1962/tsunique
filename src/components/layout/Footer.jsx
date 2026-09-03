@@ -84,13 +84,26 @@ export function Footer() {
           </FooterCol>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-white/40 sm:flex-row">
-          <p>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link to="/disclaimer" className="transition-colors hover:text-white">Disclaimer</Link>
-            <Link to="/privacy" className="transition-colors hover:text-white">Privacy Policy</Link>
-            <Link to="/terms" className="transition-colors hover:text-white">Terms of Service</Link>
+        <div className="mt-16 flex flex-col items-center gap-4 border-t border-white/10 pt-8 text-sm text-white/40">
+          <div className="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
+            <p>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link to="/disclaimer" className="transition-colors hover:text-white">Disclaimer</Link>
+              <Link to="/privacy" className="transition-colors hover:text-white">Privacy Policy</Link>
+              <Link to="/terms" className="transition-colors hover:text-white">Terms of Service</Link>
+            </div>
           </div>
+          <p className="text-center text-xs text-white/25">
+            Developed by{" "}
+            <a
+              href="https://www.guardianangelstudios.co.za/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-white/60"
+            >
+              Guardian Angel Studios
+            </a>
+          </p>
         </div>
       </div>
     </footer>

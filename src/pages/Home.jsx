@@ -110,7 +110,9 @@ export default function Home() {
           >
             <div className="flex -space-x-3">
               {TESTIMONIALS.map((t) => (
-                <img key={t.name} src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full border-2 border-white/80 object-cover" />
+                <div key={t.name} title={t.name} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/80 bg-gold/80 text-[11px] font-bold text-white">
+                  {t.name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase()}
+                </div>
               ))}
             </div>
             <div>
