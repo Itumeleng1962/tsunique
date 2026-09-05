@@ -217,6 +217,85 @@ export default function Home() {
         <Reveal className="mt-10 text-center"><Link to="/subscriptions" className="group inline-flex items-center gap-1.5 text-sm font-medium text-cream">Compare all subscription plans <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
       </section>
 
+      {/* PORTFOLIO SPOTLIGHT */}
+      <section className="bg-surface py-20 border-y border-line">
+        <div className="container-x">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-gold">Real Client Transformations</span>
+              <h2 className="mt-2 font-serif text-3xl sm:text-4xl text-cream">Our Work in Action</h2>
+              <p className="mt-2 text-sm text-[#9A9A9A] max-w-xl">
+                Explore real results — from crisp dry cleaning and precision wash & fold to duvets and before-and-after transformations.
+              </p>
+            </div>
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-xs font-semibold uppercase tracking-wider text-ink transition-all duration-300 hover:bg-cream hover:shadow-lg self-start md:self-auto"
+            >
+              Explore Full Gallery <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link to="/portfolio" className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-black/40">
+              <img
+                src="/Pics/WhatsApp Image 2026-08-26 at 20.35.38 (1).jpeg"
+                alt="Before and after laundry"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="rounded-full bg-gold/90 px-2 py-0.5 text-[10px] font-bold text-ink uppercase">Before & After</span>
+                <p className="mt-1 text-xs font-semibold text-white truncate">Clothes Transformation</p>
+              </div>
+            </Link>
+
+            <Link to="/portfolio" className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-black/40">
+              <img
+                src="/Pics/WhatsApp Image 2026-08-26 at 20.35.31.jpeg"
+                alt="Folded and packaged"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="rounded-full bg-gold/90 px-2 py-0.5 text-[10px] font-bold text-ink uppercase">Wash, Dry & Fold</span>
+                <p className="mt-1 text-xs font-semibold text-white truncate">Folded & Packaged</p>
+              </div>
+            </Link>
+
+            <Link to="/portfolio" className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-black/40">
+              <img
+                src="/Pics/WhatsApp Image 2026-08-26 at 20.35.35.jpeg"
+                alt="Dry cleaned shirts"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="rounded-full bg-gold/90 px-2 py-0.5 text-[10px] font-bold text-ink uppercase">Dry Cleaning</span>
+                <p className="mt-1 text-xs font-semibold text-white truncate">Pressed & Hung Shirts</p>
+              </div>
+            </Link>
+
+            <Link to="/portfolio" className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-black/40">
+              <img
+                src="/Pics/WhatsApp Image 2026-08-26 at 20.35.39.jpeg"
+                alt="Blankets and duvets"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="rounded-full bg-gold/90 px-2 py-0.5 text-[10px] font-bold text-ink uppercase">Blankets & Duvets</span>
+                <p className="mt-1 text-xs font-semibold text-white truncate">Fresh Duvet Bundles</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* STATS */}
       <section className="noise relative overflow-hidden bg-ink py-24 text-white">
         <div className="container-x relative z-10 grid grid-cols-2 gap-10 md:grid-cols-4">

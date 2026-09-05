@@ -26,6 +26,7 @@ export const NAV_LINKS = [
   { label: "Pricing", to: "/pricing" },
   { label: "Subscriptions", to: "/subscriptions" },
   { label: "How It Works", to: "/how-it-works" },
+  { label: "Portfolio", to: "/portfolio" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];

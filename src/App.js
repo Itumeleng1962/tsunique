@@ -24,6 +24,7 @@ const FAQ = lazy(() => import("@/pages/FAQ"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const Disclaimer = lazy(() => import("@/pages/Disclaimer"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
+const Portfolio = lazy(() => import("@/pages/Portfolio"));
 
 const Login = lazy(() => import("@/pages/auth/Login"));
 const Register = lazy(() => import("@/pages/auth/Register"));
@@ -62,6 +63,7 @@ function AppRoutes() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/privacy" element={<LegalPrivacy />} />
           <Route path="/terms" element={<LegalTerms />} />
         </Route>

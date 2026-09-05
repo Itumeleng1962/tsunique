@@ -49,7 +49,7 @@ export function Footer() {
           </div>
 
           <FooterCol title="Company">
-            {NAV_LINKS.slice(0, 5).map((l) => (
+            {NAV_LINKS.map((l) => (
               <FooterLink key={l.to} to={l.to}>{l.label}</FooterLink>
             ))}
           </FooterCol>
