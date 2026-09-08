@@ -225,7 +225,7 @@ export default function Home() {
               <span className="text-xs font-bold uppercase tracking-wider text-gold">Real Client Transformations</span>
               <h2 className="mt-2 font-serif text-3xl sm:text-4xl text-cream">Our Work in Action</h2>
               <p className="mt-2 text-sm text-[#9A9A9A] max-w-xl">
-                Explore real results — from crisp dry cleaning and precision wash & fold to duvets and before-and-after transformations.
+                Explore real results — from crisp wash & iron and precision wash & fold to duvets and before-and-after transformations.
               </p>
             </div>
             <Link
@@ -268,13 +268,13 @@ export default function Home() {
             <Link to="/portfolio" className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-black/40">
               <img
                 src="/Pics/WhatsApp Image 2026-08-26 at 20.35.35.jpeg"
-                alt="Dry cleaned shirts"
+                alt="Ironed and hung shirts"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3">
-                <span className="rounded-full bg-gold/90 px-2 py-0.5 text-[10px] font-bold text-ink uppercase">Dry Cleaning</span>
+                <span className="rounded-full bg-gold/90 px-2 py-0.5 text-[10px] font-bold text-ink uppercase">Wash & Iron</span>
                 <p className="mt-1 text-xs font-semibold text-white truncate">Pressed & Hung Shirts</p>
               </div>
             </Link>
